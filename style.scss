@@ -1,0 +1,475 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  body {
+    overflow-x: hidden;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main {
+  height: 80vh;
+  width: 100%;
+  background: url('./assets/image-header.jpg') no-repeat center center/cover;
+
+  &__header {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      padding-left: 10px;
+      font-size: 25px;
+      letter-spacing: 2px;
+    }
+    .menu {
+      color: #fff;
+      position: absolute;
+      right: 10px;
+      display: none;
+    }
+    .navigation {
+      display: flex;
+      .nav {
+        padding-right: 10px;
+        a {
+          padding-right: 20px;
+        }
+        .contact {
+          background-color: #fff;
+          color: #000;
+          padding: 10px;
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+  &__center {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    color: #fff;
+    .main-txt {
+      letter-spacing: 5px;
+      position: relative;
+      top: -20px;
+    }
+    .main-icon {
+      position: relative;
+      top: -5rem;
+    }
+  }
+}
+
+.section1 {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  .left {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+  .right {
+    width: 100%;
+    background: url('./assets/pexels-ron-lach-8858698.jpg') no-repeat center
+      center/cover;
+  }
+  h1,
+  p,
+  h3 {
+    padding: 20px;
+  }
+}
+
+.section2 {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  .left {
+    width: 100%;
+    background: url('./assets/pexels-any-lane-5946069.jpg') no-repeat center
+      center/cover;
+  }
+  .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+  h1,
+  p,
+  h3 {
+    padding: 20px;
+  }
+}
+.section3 {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  .left {
+    width: 100%;
+    background: url('./assets/image-graphic-design.jpg') no-repeat center
+      center/cover;
+  }
+  .right {
+    width: 100%;
+    background: url('./assets/image-photography.jpg') no-repeat center
+      center/cover;
+  }
+}
+
+.details {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+  }
+
+  &__text {
+    letter-spacing: 3px;
+  }
+  &__users {
+    display: flex;
+    flex-direction: row;
+    .user1,
+    .user2,
+    .user3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .user1 {
+      padding: 4rem 1.5rem 4rem 4rem;
+      div,
+      h3 {
+        padding-top: 1.5rem;
+      }
+    }
+    .user2 {
+      padding: 4rem 1.5rem 4rem 1.5rem;
+      div,
+      h3 {
+        padding-top: 1.5rem;
+      }
+    }
+    .user3 {
+      padding: 4rem 4rem 4rem 1.5rem;
+      div,
+      h3 {
+        padding-top: 1.5rem;
+      }
+    }
+  }
+}
+
+.product {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  .left {
+    height: 40vh;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    img {
+      width: 50%;
+    }
+  }
+  .right {
+    height: 40vh;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    img {
+      width: 50%;
+    }
+  }
+}
+
+.footer {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color: #76c5cf;
+  color: green;
+  opacity: 0.8;
+  &__text {
+    letter-spacing: 1px;
+    padding-right: 20px;
+  }
+  &__nav {
+    a {
+      text-align: center;
+      color: green;
+      padding-right: 40px;
+    }
+  }
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    i {
+      padding-right: 40px;
+    }
+  }
+}
+
+// Media Start
+@media (max-width: 550px) {
+  // MAIN START
+  .main {
+    height: 80vh;
+    width: 100%;
+    &__header {
+      display: flex;
+      justify-content: center;
+      .logo {
+        font-size: 30px;
+      }
+      .menu {
+        display: flex;
+        cursor: pointer;
+      }
+      .navigation {
+        z-index: 1;
+        // display: none;
+        .nav {
+          padding-right: 10px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          right: 0;
+          top: 10%;
+          background: #afabab;
+          height: 70vh;
+          width: 100%;
+          justify-content: space-evenly;
+          a {
+            padding-right: 20px;
+          }
+          .contact {
+            background-color: #fff;
+            color: #000;
+            padding: 10px;
+            border-radius: 25px;
+          }
+        }
+        .slide {
+          transform: translateX(100%);
+          transition: transform 0.5s ease-in-out;
+        }
+      }
+    }
+    &__center {
+      height: 70vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      justify-content: space-evenly;
+      color: #fff;
+      .main-txt {
+        letter-spacing: 6px;
+      }
+      .main-icon {
+        font-size: x-large;
+      }
+    }
+  }
+  // MAIN END
+
+  // SECTION-1 START
+  .section1 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column-reverse;
+    .left {
+      height: 50vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: space-evenly;
+      padding: 30px;
+    }
+    .right {
+      height: 50vh;
+      width: 100%;
+      background: url('./assets/pexels-ron-lach-8858698.jpg') no-repeat center
+        center/cover;
+    }
+  }
+  // SECTION-1 END
+
+  // SECTION-2 START
+  .section2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .left {
+      height: 50vh;
+      width: 100%;
+      background: url('./assets/pexels-any-lane-5946069.jpg') no-repeat center
+        center/cover;
+    }
+    .right {
+      height: 50vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      justify-content: space-evenly;
+      padding: 30px;
+    }
+  }
+  // SECTION-2 END
+
+  .section3 {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .left {
+      height: 40vh;
+      width: 100%;
+      background: url('./assets/image-graphic-design.jpg') no-repeat center
+        center/cover;
+    }
+    .right {
+      height: 40vh;
+      width: 100%;
+      background: url('./assets/image-photography.jpg') no-repeat center
+        center/cover;
+    }
+  }
+
+  .details {
+    height: 140vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__text {
+      text-align: center;
+      opacity: 0.5;
+    }
+    &__users {
+      display: flex;
+      flex-direction: column;
+      .user1 {
+        height: 40vh;
+        width: 100%;
+        img {
+          border-radius: 5rem;
+        }
+        div {
+          opacity: 0.8;
+        }
+      }
+      .user2 {
+        height: 40vh;
+        width: 100%;
+        img {
+          border-radius: 5rem;
+        }
+        div {
+          padding: 20px 0 0 40px;
+          opacity: 0.8;
+        }
+      }
+      .user3 {
+        height: 40vh;
+        width: 100%;
+        img {
+          border-radius: 5rem;
+        }
+        div {
+          padding: 10px 0 0 40px;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .product {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .left {
+      height: 20vh;
+      width: 100%;
+      img {
+        background-size: auto;
+      }
+    }
+    .right {
+      height: 20vh;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    height: 40vh;
+    width: 100%;
+
+    &__text {
+      letter-spacing: 2px;
+      padding-right: 15px;
+    }
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      a {
+        padding-right: 20px;
+      }
+    }
+    &__icon {
+      display: flex;
+      flex-direction: row;
+      i {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
